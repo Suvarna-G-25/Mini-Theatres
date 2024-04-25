@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light bg-warning">
+    <div class="container">
+       
+       <img src="/assets/magicblashlogo.png"height="150"width="200">
+   <div class="container-fluid d-flex justify-content-center">
+       <ul class="navbar-nav">
+           <li class="nav-item"><a routerLink="/user/home" class="nav-link">Home</a></li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Events</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a routerLink="/user/birthday">Birthday Parties</a></li>
+                <li class="dropdown-item"><a routerLink="/user/anniversary">Anniversary Parties</a></li>
+                <li class="dropdown-item"><a routerLink="/user/otherparties">Other Parties and events</a></li>
+                
+            </ul>
+           </li>
+           <li class="nav-item">
+            <a routerLink="/user/cart" class="nav-link">Cart<span *ngIf="cartLength!=0" class="badge bg danger text-white">{{cartLength}}</span></a>
+        </li>
+           <li class="nav-item"><a routerLink="" class="nav-link">logout</a></li>
+       </ul>
+      </div>
+   </div>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="row" *ngIf="cartitems.length==0">
+        <h3>Cart is empty <a routerLink="/user/events">Book now</a></h3>
+    </div>
+    
+        <div class="row">
+            <div class="col-md-4" *ngFor="let e of cartitems">
+                <div class="card">
+                   <div class="card-header">
+                   <img [src]="e.eventImage" alt="" class="card-img-top">
+                   </div>
+                   <div class="card-body">
+                       <h4 class="card-title">{{e.eventName}}</h4>
+                       <p class="card-text">{{e.eventDescription}}</p>
+                       <p class="card-text">{{e.eventCompany}}</p>
+                       <p class="card-text">{{e.eventPrice}}</p>
+                   </div>
+                   <div class="card-footer">
+                   <button class="btn btn-danger" (click)="delete(e)"><i class="fa fa-trash"></i></button>
+                   </div>
+                </div>
+               </div>
+        </div>
+    
+        <div class="row" *ngIf="cartitems.length!=0">
+            <div class="col-md-4">
+                <h3> Total : {{totalprice}}</h3>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">Book Now</button>
+                
+            </div>
+        </div>
+    
+        <div class="modal fade" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <h4>Buy Now</h4>
+                        <a data-bs-dismiss="modal" class="btn-close"></a>
+                    </div> -->
+                    <div class="modal-body">
+                        <h3>Are you sure to book the decorations ?</h3>
+                        <label><h3>Select any theater</h3></label>
+                        <select>
+                            <option>Roseline theater</option>
+                            <option>Spectra theater</option>
+                            <option>Bliss theater</option>
+                            <option>Magestic theater</option>
+                            <option>Platinum theater</option>
+                            <option>Scarlet theater(couple)</option>
+                        </select>
+                        <h4>Duration: 3 hours</h4>
+                        <h4>Total: {{totalprice}}</h4>
+                        <h3>Quantity:{{cartlength}}</h3>
+                        <h3>Payment Method</h3>
+                        <input type="radio" name="payment" id="" checked>UPI Payment
+                        <input type="radio" name="payment" id="">Card Payment
+                        <h3>Address</h3>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" (click)="buy(e)" data-bs-dismiss="modal" >Book Now</button>
+                        <button class="btn btn-primary" data-bs-dismiss="modal" >Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

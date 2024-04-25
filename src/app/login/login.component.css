@@ -1,0 +1,20 @@
+.myform{
+    margin-top:200px;
+    margin-left:180px;
+    border:1px solid lightgrey;
+    width:280px;
+    padding:20px;
+    border-radius: 10px;
+    background-color:rgb(208, 204, 239);
+}
+.myimg{
+    margin-left:-100px;
+}
+.myh1{
+    color:black;
+}
+.myh2{
+    margin-top:-650px;
+    color:white;
+    font-size:50px;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Add Events</h1>
+            <form action="" (ngSubmit)="addEvents()">
+            <div class="form-group">
+                <label class="form-label">Event Id</label>
+                   <input type="text" class="form-control" name="id" [(ngModel)]="eventId">               
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event Name</label>
+                   <input type="text" class="form-control" name="ename" [(ngModel)]="eventName">               
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event Company</label>
+                   <input type="text" class="form-control" name="company" [(ngModel)]="eventCompany">               
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event Price</label>
+                   <input type="text" class="form-control" name="price" [(ngModel)]="eventPrice">               
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event Description</label>
+                   <input type="text" class="form-control" name="price" [(ngModel)]="eventDescription">               
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event Image</label>
+                   <input type="text" class="form-control" name="image" [(ngModel)]="eventImage">               
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-warning" type="reset">Cancel</button>
+        </form>
+        </div>
+    </div>
+</div>
+

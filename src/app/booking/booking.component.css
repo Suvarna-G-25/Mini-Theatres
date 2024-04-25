@@ -1,0 +1,43 @@
+.locations{
+    border:1px solid black;
+    width:1200px;
+    margin-top:40px;
+    margin-left:150px;
+    border-radius: 15px;
+    background-color: rgb(230, 195, 225);
+    border:none;
+    height:580px;
+}
+.hitec{
+    margin-left:80px;
+    border:1px solid black;
+    width:500px;
+    background-color: white;
+    margin-top:40px;
+    border:none;
+    border-radius: 10px;
+   
+}
+.myimg1{
+    margin-left:80px;
+    margin-top:20px;
+}
+.miya{
+    margin-left:80px;
+    border:1px solid black;
+    width:500px;
+    background-color: white;
+    margin-top:-450px;
+    border:none;
+    border-radius: 10px;
+    margin-left:600px;
+}
+.myimg2{
+    margin-left:80px;
+    margin-top:20px;
+}
+.dt{
+    margin-left:400px;
+    margin-top:20px;
+}
+

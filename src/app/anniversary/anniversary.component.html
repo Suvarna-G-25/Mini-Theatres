@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let e of event">
+        <div class="col-md-4" *ngIf="e.eventName=='anniversary'">
+            <div class="card">
+                <div class="card-header">
+                    <img [src]="e.eventImage" class="card-img-top" height="270" width="150">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{e.eventDescription}}</h4>
+                    <p class="card-text">company:{{e.eventCompany}}</p>
+                    <p class="card-text">price:{{e.eventPrice | currency:'INR'}}</p>
+                </div>
+                <button class="btn btn-primary" (click)="addtocart(e)"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+               
+            </div>
+        </div>
+    </ng-container>
+    </div>
+</div>
